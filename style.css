@@ -110,5 +110,5 @@ h3 { font-size: 1.08rem; }
   .feature-grid { grid-template-columns: repeat(4, 1fr); }
   .example-grid { grid-template-columns: auto 1fr auto; gap: 24px; }
   .pricing-grid, .faq-grid { grid-template-columns: 1fr 1fr; gap: 64px; }
-  .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1.8fr .8fr 1.4fr; }
 }
