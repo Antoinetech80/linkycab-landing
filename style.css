@@ -101,7 +101,10 @@ h3 { font-size: 1.08rem; letter-spacing: -0.02em; }
 
 .site-footer { background: var(--color-text); padding: 38px 0; }
 .footer-grid { display: grid; gap: 22px; }
-.footer-logo { width: 132px; margin-bottom: 12px; }
+.footer-brand-heading { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.footer-logo { width: 42px; height: 42px; border-radius: 12px; }
+.footer-brand-name { color: #fff !important; font-size: 1rem !important; font-weight: 800; letter-spacing: -.02em; }
+.footer-baseline { max-width: 300px; color: #c9d0da; }
 .site-footer p, .site-footer a { color: #c9d0da; font-size: .76rem; }
 .footer-title { margin-bottom: 6px; color: #fff !important; font-weight: 800; }
 .site-footer nav { display: grid; gap: 6px; }
