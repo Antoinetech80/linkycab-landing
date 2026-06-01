@@ -1,6 +1,6 @@
-# LinkyCab — Landing page statique
+# Linkycab — Landing page statique
 
-Landing page marketing de **LinkyCab**, la carte digitale pour chauffeurs privés.
+Landing page marketing de **Linkycab**, la carte digitale pour chauffeurs privés.
 
 ## Stack
 
