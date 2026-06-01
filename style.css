@@ -56,32 +56,21 @@ h3 { font-size: 1.08rem; letter-spacing: -0.02em; }
 .problem p:not(.eyebrow) { max-width: 720px; margin-top: 18px; color: #c6ced9; }
 .problem strong { display: block; max-width: 720px; margin-top: 20px; color: #fff; font-size: 1.05rem; }
 
-.solution-grid, .feature-grid, .action-grid { display: grid; gap: 12px; }
+.solution-grid, .feature-grid { display: grid; gap: 12px; }
 .solution-grid article { border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-card); padding: 22px; }
 .card-number { display: inline-flex; margin-bottom: 30px; border-radius: 999px; background: var(--color-brand-tint); padding: 5px 10px; color: var(--color-brand); font-size: .7rem; font-weight: 800; }
-.solution-grid p { margin-top: 8px; font-size: .86rem; }
 
 .features, .dashboard { background: #ede9ec; }
-.feature-grid, .action-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.feature-grid article, .action-grid article { display: flex; min-height: 92px; align-items: flex-start; gap: 10px; border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-card); padding: 16px 14px; }
-.feature-grid span, .action-grid span { display: grid; flex: 0 0 22px; height: 22px; place-items: center; border-radius: 50%; background: var(--color-brand-tint); color: var(--color-brand); font-size: .7rem; font-weight: 800; }
-.feature-grid p, .action-grid p { color: var(--color-text); font-size: .77rem; font-weight: 700; line-height: 1.4; }
+.feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.feature-grid article { display: flex; min-height: 92px; align-items: flex-start; gap: 10px; border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-card); padding: 16px 14px; }
+.feature-grid span { display: grid; flex: 0 0 22px; height: 22px; place-items: center; border-radius: 50%; background: var(--color-brand-tint); color: var(--color-brand); font-size: .7rem; font-weight: 800; }
+.feature-grid p { color: var(--color-text); font-size: .77rem; font-weight: 700; line-height: 1.4; }
 
-.client-actions { background: var(--color-bg); }
-.client-actions .section-heading p:not(.eyebrow), .dashboard .section-heading p:not(.eyebrow) { margin-top: 12px; }
+.dashboard .section-heading p:not(.eyebrow) { margin-top: 12px; }
 
 .dashboard-benefits { display: grid; gap: 10px; }
 .dashboard-benefits article { border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-card); padding: 14px; }
-.dashboard-benefits h3 { margin-bottom: 5px; font-size: .9rem; }
-.dashboard-benefits p { font-size: .78rem; }
-
-.example { background: var(--color-text); }
-.example-grid { display: grid; gap: 18px; align-items: center; }
-.example-icon { width: 54px; border-radius: 15px; }
-.example .eyebrow { color: var(--color-brand); }
-.example h2 { max-width: 650px; color: #fff; }
-.example p:not(.eyebrow) { max-width: 600px; margin-top: 10px; color: #c6ced9; }
-.example .button { justify-self: start; }
+.dashboard-benefits p { color: var(--color-text); font-size: .78rem; font-weight: 700; }
 
 .pricing-grid { display: grid; gap: 26px; align-items: center; }
 .pricing-grid > div > p:not(.eyebrow) { margin-top: 14px; }
@@ -89,7 +78,6 @@ h3 { font-size: 1.08rem; letter-spacing: -0.02em; }
 .price-label { color: var(--color-brand); font-size: .72rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
 .price { margin-top: 7px; color: var(--color-text); font-size: 3rem; font-weight: 800; letter-spacing: -.08em; line-height: 1.1; }
 .price small { font-size: 1rem; letter-spacing: 0; }
-.price-note { margin-top: 10px; font-size: .78rem; }
 .monthly { margin: 18px 0; border-top: 1px solid var(--color-border); padding-top: 14px; font-size: .78rem; font-weight: 700; }
 .price-card .button { width: 100%; }
 
@@ -119,11 +107,9 @@ h3 { font-size: 1.08rem; letter-spacing: -0.02em; }
   .hero-grid { grid-template-columns: 1.12fr .72fr; gap: 56px; }
   h1 { letter-spacing: -0.025em; line-height: 1.05; }
   .hero-text { font-size: 1.06rem; }
-  .solution-grid { grid-template-columns: repeat(4, 1fr); }
+  .solution-grid { grid-template-columns: repeat(3, 1fr); }
   .feature-grid { grid-template-columns: repeat(4, 1fr); }
-  .action-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .dashboard-benefits { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .example-grid { grid-template-columns: auto 1fr auto; gap: 24px; }
   .pricing-grid, .faq-grid { grid-template-columns: 1fr 1fr; gap: 64px; }
   .footer-grid { grid-template-columns: 1.8fr .8fr 1.4fr; }
 }
