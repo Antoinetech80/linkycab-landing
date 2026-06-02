@@ -1,16 +1,18 @@
 :root {
-  --color-bg: #F3F1F4;
+  --color-bg: #F5F1EE;
+  --color-bg-soft: #F7F3F0;
   --color-brand: #FC5123;
   --color-brand-soft: #FF6B3D;
   --color-brand-tint: #FFF0EA;
   --color-text: #111827;
   --color-muted: #4B5563;
   --color-card: #FFFFFF;
-  --color-border: #E8E1DE;
+  --color-border: #E9E1DA;
   --font-main: "Plus Jakarta Sans", Arial, sans-serif;
   --radius-md: 20px;
   --radius-lg: 28px;
   --shadow-soft: 0 20px 60px rgba(15, 23, 42, 0.08);
+  --shadow-card: 0 10px 28px rgba(15, 23, 42, 0.045);
 }
 
 * { box-sizing: border-box; }
@@ -33,7 +35,7 @@ h3 { font-size: 1.08rem; letter-spacing: -0.02em; }
 .button-small { min-height: 40px; padding: 9px 12px; font-size: .7rem; white-space: nowrap; }
 .button-secondary { border-color: var(--color-border); background: var(--color-card); color: var(--color-text); }
 
-.site-header { position: sticky; z-index: 5; top: 0; border-bottom: 1px solid rgba(232, 225, 222, .8); background: rgba(243, 241, 244, .94); backdrop-filter: blur(14px); }
+.site-header { position: sticky; z-index: 5; top: 0; border-bottom: 1px solid rgba(232, 225, 222, .8); background: rgba(245, 241, 238, .94); backdrop-filter: blur(14px); }
 .header-inner { display: flex; min-height: 66px; align-items: center; justify-content: space-between; gap: 16px; }
 .brand img { width: 128px; height: auto; }
 .main-nav { display: none; align-items: center; gap: 26px; }
@@ -60,7 +62,7 @@ h3 { font-size: 1.08rem; letter-spacing: -0.02em; }
 .solution-grid::-webkit-scrollbar, .feature-grid::-webkit-scrollbar { display: none; }
 .solution-grid:focus-visible, .feature-grid:focus-visible { border-radius: 4px; outline: 2px solid var(--color-brand); outline-offset: 4px; }
 .solution-grid article, .feature-grid article { flex: 0 0 82%; flex-shrink: 0; scroll-snap-align: start; }
-.solution-grid article { border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-card); padding: 22px; }
+.solution-grid article { border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-card); padding: 22px; box-shadow: var(--shadow-card); }
 .card-number { display: inline-flex; margin-bottom: 30px; border-radius: 999px; background: var(--color-brand-tint); padding: 5px 10px; color: var(--color-brand); font-size: .7rem; font-weight: 800; }
 
 .screenshots .section-heading p:not(.eyebrow) { margin-top: 12px; }
@@ -76,10 +78,10 @@ h3 { font-size: 1.08rem; letter-spacing: -0.02em; }
 .screenshot-copy p { margin-top: 7px; font-size: .8rem; line-height: 1.5; }
 .screenshots-action { margin-top: 18px; text-align: center; }
 
-.dashboard { background: #ede9ec; }
+.dashboard { background: var(--color-bg-soft); }
 .business-features { background: var(--color-bg); }
 .client-action-grid article { flex-basis: 86%; }
-.feature-grid article { display: flex; min-height: 150px; align-items: center; gap: 12px; border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-card); padding: 20px 18px; }
+.feature-grid article { display: flex; min-height: 150px; align-items: center; gap: 12px; border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-card); padding: 20px 18px; box-shadow: var(--shadow-card); }
 .feature-grid span { display: grid; flex: 0 0 26px; height: 26px; place-items: center; border-radius: 50%; background: var(--color-brand-tint); color: var(--color-brand); font-size: .72rem; font-weight: 800; }
 .feature-grid h3 { font-size: 1rem; }
 .feature-grid p { margin-top: 7px; font-size: .8rem; line-height: 1.5; }
@@ -87,7 +89,7 @@ h3 { font-size: 1.08rem; letter-spacing: -0.02em; }
 .business-features .section-heading p:not(.eyebrow), .dashboard .section-heading p:not(.eyebrow) { margin-top: 12px; }
 
 .dashboard-benefits { display: grid; gap: 10px; }
-.dashboard-benefits article { border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-card); padding: 14px; }
+.dashboard-benefits article { border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-card); padding: 14px; box-shadow: var(--shadow-card); }
 .dashboard-benefits p { color: var(--color-text); font-size: .78rem; font-weight: 700; }
 
 .pricing-grid { display: grid; gap: 26px; align-items: center; }
@@ -99,7 +101,7 @@ h3 { font-size: 1.08rem; letter-spacing: -0.02em; }
 .monthly { margin: 18px 0; border-top: 1px solid var(--color-border); padding-top: 14px; font-size: .78rem; font-weight: 700; }
 .price-card .button { width: 100%; }
 
-.faq { background: var(--color-card); }
+.faq { background: var(--color-bg-soft); }
 .faq-grid { display: grid; gap: 4px; }
 .faq-list details { border-bottom: 1px solid var(--color-border); padding: 17px 0; }
 .faq-list summary { cursor: pointer; color: var(--color-text); font-size: .88rem; font-weight: 800; line-height: 1.45; }
