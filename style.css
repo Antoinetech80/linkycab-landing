@@ -259,11 +259,12 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .pill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .business { background: rgba(234, 244, 255, .42); }
 
-.pricing-cards { display: grid; gap: 16px; }
+.pricing-cards { display: grid; gap: 18px; }
 .price-card {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  height: 100%;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: #fff;
@@ -273,10 +274,12 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .price { color: var(--blue); font-size: clamp(2.7rem, 12vw, 4.4rem); font-weight: 800; letter-spacing: -.08em; line-height: .95; }
 .price small { font-size: 1rem; letter-spacing: 0; }
 .price-card ul { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.price-card .button { margin-top: auto; }
 .price-card li { position: relative; padding-left: 22px; color: #334155; font-size: .86rem; font-weight: 700; }
 .price-card li::before { content: "✓"; position: absolute; left: 0; color: var(--blue); font-weight: 900; }
-.option { border-top: 1px solid var(--border); padding-top: 12px; color: var(--blue); font-weight: 800; }
-.featured-price { border: 2px solid #CFE6FF; background: linear-gradient(180deg, #fff, #F4FAFF); transform: translateY(-2px); }
+.option { border-top: 1px solid var(--border); padding-top: 12px; color: var(--muted); font-size: .8rem; font-weight: 800; }
+.featured-price { border: 2px solid #CFE6FF; background: linear-gradient(180deg, #fff, #F4FAFF); transform: translateY(-2px); box-shadow: 0 24px 58px rgba(18, 58, 90, .16); }
+.nfc-price .button { box-shadow: 0 16px 34px rgba(252, 81, 35, .26); }
 .badges { display: flex; flex-wrap: wrap; gap: 8px; }
 .badges span { border-radius: 999px; background: #FFF1EA; padding: 7px 10px; color: var(--orange); font-size: .68rem; font-weight: 900; text-transform: uppercase; }
 .pricing-note { margin-top: 18px; text-align: center; color: var(--blue); font-weight: 800; }
@@ -325,7 +328,8 @@ details p { margin-top: 8px; color: var(--muted); font-size: .85rem; }
   .showcase-visual { max-width: 480px; }
   .nfc-card { grid-template-columns: 1fr 340px; padding: 28px; }
   .pill-grid { grid-template-columns: repeat(5, 1fr); }
-  .pricing-cards { grid-template-columns: 1fr 1fr; align-items: stretch; }
+  .pricing-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+  .featured-price { transform: translateY(-8px); }
   .faq-grid { grid-template-columns: .8fr 1.2fr; gap: 54px; }
   .footer-grid { grid-template-columns: 1.4fr .8fr; }
   .hero-visual { width: min(100%, 430px); }
