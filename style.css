@@ -230,8 +230,39 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .action-grid article,
 .benefit-grid article,
 .pill-grid article { color: var(--blue); font-size: .92rem; font-weight: 800; }
-.action-grid article::before,
-.benefit-grid article::before {
+.benefit-grid article {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+.benefit-grid h3 {
+  font-size: clamp(1.05rem, 4.6vw, 1.18rem);
+  letter-spacing: -.03em;
+}
+.benefit-badge {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #CFE6FF;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #F3F9FF, var(--soft));
+  color: var(--blue);
+  font-size: .82rem;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .78);
+}
+.benefit-badge::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  margin-left: 4px;
+  border-radius: 999px;
+  background: rgba(252, 81, 35, .72);
+}
+.action-grid article::before {
   content: "";
   display: block;
   width: 28px;
