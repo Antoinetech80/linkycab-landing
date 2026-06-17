@@ -181,6 +181,23 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .access-grid p { margin-top: 10px; color: var(--muted); font-size: .92rem; font-weight: 700; }
 .access-note { margin-top: 18px; text-align: center; color: var(--blue); font-weight: 900; }
 
+.mobile-carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: calc(100% + 34px);
+  margin-inline: -17px;
+  padding: 0 17px 8px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.mobile-carousel::-webkit-scrollbar { display: none; }
+.mobile-carousel-card {
+  flex: 0 0 84%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
 
 .nfc-option { background: rgba(248, 250, 252, .82); padding-top: 0; }
 .nfc-card {
@@ -292,6 +309,18 @@ details p { margin-top: 8px; color: var(--muted); font-size: .85rem; }
   .action-grid,
   .benefit-grid { grid-template-columns: repeat(3, 1fr); }
   .access-grid { grid-template-columns: repeat(3, 1fr); }
+  .mobile-carousel {
+    display: grid;
+    overflow: visible;
+    width: auto;
+    margin-inline: 0;
+    padding: 0;
+    scroll-snap-type: none;
+  }
+  .mobile-carousel-card {
+    flex: initial;
+    scroll-snap-align: none;
+  }
   .showcase-grid { grid-template-columns: 1fr .82fr; padding: 28px; }
   .showcase-visual { max-width: 480px; }
   .nfc-card { grid-template-columns: 1fr 340px; padding: 28px; }
