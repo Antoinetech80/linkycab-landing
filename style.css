@@ -278,6 +278,17 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .price-card li { position: relative; padding-left: 22px; color: #334155; font-size: .86rem; font-weight: 700; }
 .price-card li::before { content: "✓"; position: absolute; left: 0; color: var(--blue); font-weight: 900; }
 .option { border-top: 1px solid var(--border); padding-top: 12px; color: var(--muted); font-size: .8rem; font-weight: 800; }
+.annual-nfc-highlight {
+  align-self: flex-start;
+  border: 1px solid rgba(252, 81, 35, .16);
+  border-radius: 12px;
+  background: #FFF4EC;
+  padding: 9px 12px;
+  color: var(--blue);
+  font-size: .78rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
 .featured-price { border: 2px solid #CFE6FF; background: linear-gradient(180deg, #fff, #F4FAFF); transform: translateY(-2px); box-shadow: 0 24px 58px rgba(18, 58, 90, .16); }
 .nfc-price .button { box-shadow: 0 16px 34px rgba(252, 81, 35, .26); }
 .badges { display: flex; flex-wrap: wrap; gap: 8px; }
