@@ -71,15 +71,14 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 
 .eyebrow {
   display: inline-flex;
-  margin-bottom: 12px;
+  margin-top: 14px;
   border-radius: 999px;
-  background: #FFF1EA;
-  padding: 7px 11px;
-  color: var(--orange);
-  font-size: .68rem;
-  font-weight: 800;
-  letter-spacing: .09em;
-  text-transform: uppercase;
+  background: rgba(255, 241, 234, .58);
+  padding: 6px 10px;
+  color: rgba(252, 81, 35, .82);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
 }
 .section-heading { max-width: 720px; margin-bottom: 26px; }
 .section-heading p:not(.eyebrow) { margin-top: 12px; color: var(--muted); }
