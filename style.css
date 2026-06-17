@@ -88,9 +88,7 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .hero { overflow: hidden; padding-top: 44px; }
 .hero-grid { display: grid; gap: 32px; align-items: center; }
 .hero-text { margin-top: 16px; font-size: 1rem; }
-.hero-punch { display: inline-flex; margin-top: 14px; color: var(--blue); font-weight: 800; }
 .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-.micro-copy { margin-top: 14px; color: var(--muted); font-size: .78rem; font-weight: 700; }
 .hero-visual { justify-self: center; width: min(100%, 390px); }
 
 .phone-frame {
@@ -181,17 +179,34 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   font-weight: 800;
 }
 .access-grid p { margin-top: 10px; color: var(--muted); font-size: .92rem; font-weight: 700; }
-.access-nfc img {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  width: 132px;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  box-shadow: 0 14px 30px rgba(18, 58, 90, .10);
-  transform: rotate(-6deg);
-}
 .access-note { margin-top: 18px; text-align: center; color: var(--blue); font-weight: 900; }
+
+
+.nfc-option { background: rgba(248, 250, 252, .82); padding-top: 0; }
+.nfc-card {
+  display: grid;
+  gap: 22px;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.nfc-copy p { margin-top: 12px; color: var(--muted); }
+.nfc-offer {
+  display: inline-flex;
+  border-radius: 999px;
+  background: #FFF1EA;
+  padding: 8px 12px;
+  color: var(--orange) !important;
+  font-size: .78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.nfc-tagline { margin-top: 14px; text-align: left; }
+.nfc-visual { max-width: 320px; justify-self: center; }
+.nfc-visual img { transform: none; }
 
 .action-grid,
 .benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -223,7 +238,7 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   box-shadow: var(--shadow);
 }
 .showcase-grid p:not(.eyebrow) { margin-top: 12px; color: var(--muted); }
-.showcase-visual { max-width: 390px; justify-self: center; }
+.showcase-visual { width: 100%; max-width: 430px; justify-self: center; }
 .pill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .business { background: rgba(234, 244, 255, .42); }
 
@@ -277,9 +292,9 @@ details p { margin-top: 8px; color: var(--muted); font-size: .85rem; }
   .action-grid,
   .benefit-grid { grid-template-columns: repeat(3, 1fr); }
   .access-grid { grid-template-columns: repeat(3, 1fr); }
-  .access-nfc img { right: 16px; bottom: 16px; width: 152px; }
-  .showcase-grid { grid-template-columns: 1fr .78fr; padding: 32px; }
-  .showcase-visual { max-width: 430px; }
+  .showcase-grid { grid-template-columns: 1fr .82fr; padding: 28px; }
+  .showcase-visual { max-width: 480px; }
+  .nfc-card { grid-template-columns: 1fr 340px; padding: 28px; }
   .pill-grid { grid-template-columns: repeat(5, 1fr); }
   .pricing-cards { grid-template-columns: 1fr 1fr; align-items: stretch; }
   .faq-grid { grid-template-columns: .8fr 1.2fr; gap: 54px; }
