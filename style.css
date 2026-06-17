@@ -93,16 +93,31 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .micro-copy { margin-top: 14px; color: var(--muted); font-size: .78rem; font-weight: 700; }
 .hero-visual { justify-self: center; width: min(100%, 390px); }
 
-.phone-frame,
-.showcase-visual {
+.phone-frame {
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: #fff;
   box-shadow: var(--shadow);
+  padding: 6px;
 }
-.phone-frame { padding: 6px; }
 .phone-frame img { border-radius: 22px; }
+
+.image-frame {
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  border-radius: 24px;
+  background: #FFFFFF;
+  box-shadow: 0 18px 45px rgba(15, 37, 55, .08);
+}
+.image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+  object-fit: cover;
+  transform: scale(1.02);
+}
 
 .problem { background: linear-gradient(135deg, var(--night), var(--blue)); }
 .problem h2,
@@ -208,7 +223,7 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   box-shadow: var(--shadow);
 }
 .showcase-grid p:not(.eyebrow) { margin-top: 12px; color: var(--muted); }
-.showcase-visual { max-width: 330px; justify-self: center; padding: 6px; }
+.showcase-visual { max-width: 390px; justify-self: center; }
 .pill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .business { background: rgba(234, 244, 255, .42); }
 
@@ -263,7 +278,8 @@ details p { margin-top: 8px; color: var(--muted); font-size: .85rem; }
   .benefit-grid { grid-template-columns: repeat(3, 1fr); }
   .access-grid { grid-template-columns: repeat(3, 1fr); }
   .access-nfc img { width: 176px; }
-  .showcase-grid { grid-template-columns: 1fr .68fr; padding: 32px; }
+  .showcase-grid { grid-template-columns: 1fr .78fr; padding: 32px; }
+  .showcase-visual { max-width: 430px; }
   .pill-grid { grid-template-columns: repeat(5, 1fr); }
   .pricing-cards { grid-template-columns: 1fr 1fr; align-items: stretch; }
   .faq-grid { grid-template-columns: .8fr 1.2fr; gap: 54px; }
