@@ -38,8 +38,8 @@ h1 { font-size: clamp(2.25rem, 9vw, 4.35rem); line-height: 1.02; font-weight: 80
 h2 { font-size: clamp(1.8rem, 6vw, 3rem); font-weight: 800; }
 h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 700; }
 
-.container { width: min(1120px, calc(100% - 34px)); margin-inline: auto; }
-.section { padding: 58px 0; }
+.container { width: min(1140px, calc(100% - 40px)); margin-inline: auto; }
+.section { padding: 52px 0; }
 
 .site-header {
   position: sticky;
@@ -82,14 +82,14 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   font-weight: 700;
   letter-spacing: -.01em;
 }
-.section-heading { max-width: 720px; margin-bottom: 26px; }
-.section-heading p:not(.eyebrow) { margin-top: 12px; color: var(--muted); }
+.section-heading { max-width: 720px; margin-bottom: 32px; }
+.section-heading p:not(.eyebrow) { margin-top: 16px; color: var(--muted); }
 .section-heading-centered { margin-inline: auto; text-align: center; }
 
-.hero { overflow: hidden; padding-top: 44px; }
-.hero-grid { display: grid; gap: 32px; align-items: center; }
-.hero-text { margin-top: 16px; font-size: 1rem; }
-.button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.hero { overflow: hidden; padding-top: 52px; padding-bottom: 58px; }
+.hero-grid { display: grid; gap: 42px; align-items: center; }
+.hero-text { margin-top: 22px; font-size: 1rem; }
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .hero-visual { justify-self: center; width: min(100%, 350px); }
 
 .phone-frame {
@@ -134,7 +134,7 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .step-grid,
 .action-grid,
 .pill-grid,
-.benefit-grid { display: grid; gap: 12px; }
+.benefit-grid { display: grid; gap: 18px; }
 .three-grid { grid-template-columns: 1fr; }
 .three-grid article,
 .step-grid article,
@@ -144,7 +144,7 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   border: 1px solid var(--border);
   border-radius: var(--card-radius);
   background: #fff;
-  padding: 18px;
+  padding: 22px;
   box-shadow: var(--card-shadow);
 }
 .problem .three-grid article { border-color: rgba(255, 255, 255, .14); background: rgba(255, 255, 255, .10); box-shadow: none; }
@@ -168,7 +168,7 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   justify-content: center;
   min-width: 44px;
   min-height: 34px;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   border: 1px solid #CFE6FF;
   border-radius: 999px;
   background: var(--soft);
@@ -182,7 +182,7 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .strong-line { color: var(--blue) !important; font-weight: 800; }
 .note { color: var(--muted); font-size: .86rem; font-weight: 700; }
 .access { background: rgba(234, 244, 255, .34); }
-.access-grid { display: grid; gap: 14px; }
+.access-grid { display: grid; gap: 18px; }
 .access-grid article {
   position: relative;
   overflow: hidden;
@@ -190,20 +190,20 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   border: 1px solid var(--border);
   border-radius: var(--card-radius);
   background: #fff;
-  padding: 18px;
+  padding: 22px;
   box-shadow: var(--card-shadow);
 }
-.access-grid p { margin-top: 10px; color: var(--muted); font-size: .86rem; font-weight: 700; line-height: 1.35; }
+.access-grid p { margin-top: 14px; color: var(--muted); font-size: .86rem; font-weight: 700; line-height: 1.35; }
 .access-note { margin-top: 18px; text-align: center; color: var(--blue); font-weight: 900; }
 
 .mobile-carousel {
   display: flex;
-  gap: 16px;
+  gap: 18px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  width: calc(100% + 34px);
-  margin-inline: -17px;
-  padding: 0 17px 8px;
+  width: calc(100% + 40px);
+  margin-inline: -20px;
+  padding: 0 20px 10px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
@@ -214,18 +214,18 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   scroll-snap-stop: always;
 }
 
-.nfc-option { background: rgba(248, 250, 252, .82); padding-top: 0; }
+.nfc-option { background: rgba(248, 250, 252, .82); padding-top: 34px; }
 .nfc-card {
   display: grid;
-  gap: 22px;
+  gap: 28px;
   align-items: center;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: #fff;
-  padding: 20px;
+  padding: 24px;
   box-shadow: var(--shadow);
 }
-.nfc-copy p { margin-top: 12px; color: var(--muted); }
+.nfc-copy p { margin-top: 16px; color: var(--muted); }
 .nfc-offer {
   display: inline-flex;
   border-radius: 999px;
@@ -247,16 +247,16 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .pill-grid article { color: var(--blue); font-size: .92rem; font-weight: 800; }
 .action-grid .mobile-carousel-card { flex-basis: 72%; }
 .action-grid article {
-  min-height: 148px;
+  min-height: 158px;
   border-color: var(--border);
   border-radius: var(--card-radius);
   background: #fff;
-  padding: 18px;
+  padding: 22px;
   box-shadow: var(--card-shadow);
 }
 .action-card {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   align-content: start;
 }
 .action-card h3 {
@@ -329,34 +329,34 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .faq { background: rgba(248, 250, 252, .82); }
 .showcase-grid {
   display: grid;
-  gap: 24px;
+  gap: 30px;
   align-items: center;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: #fff;
-  padding: 20px;
+  padding: 24px;
   box-shadow: var(--shadow);
 }
-.showcase-grid p:not(.eyebrow) { margin-top: 12px; color: var(--muted); }
+.showcase-grid p:not(.eyebrow) { margin-top: 16px; color: var(--muted); }
 .showcase-visual { width: 100%; max-width: 430px; justify-self: center; }
 .pill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .business { background: rgba(234, 244, 255, .42); }
 
-.pricing-cards { display: grid; gap: 18px; }
+.pricing-cards { display: grid; gap: 20px; }
 .price-card {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
   height: 100%;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: #fff;
-  padding: 22px;
+  padding: 24px;
   box-shadow: var(--shadow);
 }
 .price { color: var(--blue); font-size: clamp(2.7rem, 12vw, 4.4rem); font-weight: 800; letter-spacing: -.08em; line-height: .95; }
 .price small { font-size: 1rem; letter-spacing: 0; }
-.price-card ul { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.price-card ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
 .price-card .button { margin-top: auto; }
 .price-card li { position: relative; padding-left: 22px; color: #334155; font-size: .86rem; font-weight: 700; }
 .price-card li::before { content: "✓"; position: absolute; left: 0; color: var(--blue); font-weight: 900; }
@@ -376,14 +376,14 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .nfc-price .button { box-shadow: 0 16px 34px rgba(252, 81, 35, .26); }
 .badges { display: flex; flex-wrap: wrap; gap: 8px; }
 .badges span { border-radius: 999px; background: #FFF1EA; padding: 7px 10px; color: var(--orange); font-size: .68rem; font-weight: 900; text-transform: uppercase; }
-.pricing-note { margin-top: 18px; text-align: center; color: var(--blue); font-weight: 800; }
+.pricing-note { margin-top: 24px; text-align: center; color: var(--blue); font-weight: 800; }
 
-.faq-grid { display: grid; gap: 16px; }
+.faq-grid { display: grid; gap: 28px; }
 .faq-list { overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); }
-details { border-bottom: 1px solid var(--border); padding: 17px; }
+details { border-bottom: 1px solid var(--border); padding: 20px; }
 details:last-child { border-bottom: 0; }
 summary { cursor: pointer; color: var(--blue); font-size: .9rem; font-weight: 800; }
-details p { margin-top: 8px; color: var(--muted); font-size: .85rem; }
+details p { margin-top: 12px; color: var(--muted); font-size: .85rem; }
 
 .site-footer { background: var(--night); padding: 34px 0; }
 .footer-grid { display: grid; gap: 18px; }
@@ -395,11 +395,11 @@ details p { margin-top: 8px; color: var(--muted); font-size: .85rem; }
 .site-footer nav { display: grid; gap: 7px; }
 
 @media (min-width: 720px) {
-  .container { width: min(1120px, calc(100% - 64px)); }
-  .section { padding: 82px 0; }
+  .container { width: min(1140px, calc(100% - 64px)); }
+  .section { padding: 96px 0; }
   .main-nav { display: flex; }
-  .hero { padding: 72px 0 86px; }
-  .hero-grid { grid-template-columns: 1.04fr .76fr; gap: 58px; }
+  .hero { padding: 88px 0 104px; }
+  .hero-grid { grid-template-columns: 1.04fr .76fr; gap: 72px; }
   .hero-text { font-size: 1.08rem; }
   .three-grid,
   .step-grid { grid-template-columns: repeat(3, 1fr); }
@@ -419,17 +419,29 @@ details p { margin-top: 8px; color: var(--muted); font-size: .85rem; }
     scroll-snap-align: none;
   }
   .action-grid .mobile-carousel-card { flex-basis: initial; }
+  .section-heading { margin-bottom: 42px; }
+  .three-grid,
+  .step-grid,
+  .access-grid,
+  .action-grid,
+  .benefit-grid,
+  .pricing-cards { gap: 28px; }
+  .three-grid article,
+  .step-grid article,
+  .action-grid article,
+  .pill-grid article,
+  .benefit-grid article,
+  .access-grid article { padding: 28px; }
   .action-grid article {
-    min-height: 152px;
-    padding: 18px;
+    min-height: 172px;
   }
-  .showcase-grid { grid-template-columns: 1fr .82fr; padding: 28px; }
+  .showcase-grid { grid-template-columns: 1fr .82fr; padding: 34px; }
   .showcase-visual { max-width: 480px; }
-  .nfc-card { grid-template-columns: 1fr 340px; padding: 28px; }
+  .nfc-card { grid-template-columns: 1fr 340px; padding: 34px; }
   .pill-grid { grid-template-columns: repeat(5, 1fr); }
   .pricing-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
   .featured-price { transform: translateY(-8px); }
-  .faq-grid { grid-template-columns: .8fr 1.2fr; gap: 54px; }
+  .faq-grid { grid-template-columns: .8fr 1.2fr; gap: 64px; }
   .footer-grid { grid-template-columns: 1.4fr .8fr; }
   .hero-visual { width: min(100%, 380px); }
 }
