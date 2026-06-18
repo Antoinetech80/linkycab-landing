@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /app/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /signup/
+Disallow: /admin/
+
+Sitemap: https://linkycab.com/sitemap.xml
