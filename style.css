@@ -73,11 +73,11 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 
 .eyebrow {
   display: inline-flex;
-  margin-top: 14px;
+  margin-bottom: 14px;
   border-radius: 999px;
-  background: rgba(255, 241, 234, .58);
+  background: rgba(234, 244, 255, .78);
   padding: 6px 10px;
-  color: rgba(252, 81, 35, .82);
+  color: var(--blue);
   font-size: .72rem;
   font-weight: 700;
   letter-spacing: -.01em;
@@ -88,7 +88,8 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 
 .hero { overflow: hidden; padding-top: 52px; padding-bottom: 58px; }
 .hero-grid { display: grid; gap: 42px; align-items: center; }
-.hero-text { margin-top: 22px; font-size: 1rem; }
+.hero-text { margin-top: 18px; font-size: 1rem; }
+.hero-note { margin-top: 14px; color: var(--muted); font-size: .82rem; font-weight: 800; }
 .button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .hero-visual { justify-self: center; width: min(100%, 350px); }
 
@@ -160,7 +161,7 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   letter-spacing: -.025em;
 }
 .problem .three-grid article h3 { color: #fff; }
-.step-grid article { min-height: 158px; }
+.step-grid article { min-height: 132px; }
 .step-grid span,
 .access-grid span {
   display: inline-flex;
@@ -271,9 +272,11 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 }
 .benefit-grid article {
   display: grid;
-  gap: 14px;
+  gap: 12px;
   align-content: start;
+  min-height: 190px;
 }
+.benefit-grid p { color: var(--muted); font-size: .88rem; font-weight: 700; line-height: 1.4; }
 .benefit-grid h3 {
   letter-spacing: -.03em;
 }
@@ -326,7 +329,9 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 
 .keep,
 .dashboard,
-.faq { background: rgba(248, 250, 252, .82); }
+.faq,
+.showcase,
+.final-cta { background: rgba(248, 250, 252, .82); }
 .showcase-grid {
   display: grid;
   gap: 30px;
@@ -342,7 +347,7 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .pill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .business { background: rgba(234, 244, 255, .42); }
 
-.pricing-cards { display: grid; gap: 20px; }
+.pricing-cards { display: grid; gap: 20px; max-width: 820px; margin-inline: auto; }
 .price-card {
   display: flex;
   flex-direction: column;
@@ -377,6 +382,19 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .badges { display: flex; flex-wrap: wrap; gap: 8px; }
 .badges span { border-radius: 999px; background: #FFF1EA; padding: 7px 10px; color: var(--orange); font-size: .68rem; font-weight: 900; text-transform: uppercase; }
 .pricing-note { margin-top: 24px; text-align: center; color: var(--blue); font-weight: 800; }
+
+.final-cta-card {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #fff, #F4FAFF);
+  padding: 28px 22px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.final-cta-card p { max-width: 560px; color: var(--muted); }
 
 .faq-grid { display: grid; gap: 28px; }
 .faq-list { overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); }
@@ -435,11 +453,12 @@ details p { margin-top: 12px; color: var(--muted); font-size: .85rem; }
   .action-grid article {
     min-height: 172px;
   }
+  .benefit-grid article { min-height: 210px; }
   .showcase-grid { grid-template-columns: 1fr .82fr; padding: 34px; }
   .showcase-visual { max-width: 480px; }
   .nfc-card { grid-template-columns: 1fr 340px; padding: 34px; }
   .pill-grid { grid-template-columns: repeat(5, 1fr); }
-  .pricing-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+  .pricing-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
   .featured-price { transform: translateY(-8px); }
   .faq-grid { grid-template-columns: .8fr 1.2fr; gap: 64px; }
   .footer-grid { grid-template-columns: 1.4fr .8fr; }
