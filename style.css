@@ -227,6 +227,7 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   box-shadow: var(--shadow);
 }
 .nfc-copy p { margin-top: 16px; color: var(--muted); }
+.nfc-copy h2 { margin-top: 16px; }
 .nfc-offer {
   display: inline-flex;
   border-radius: 999px;
@@ -238,6 +239,9 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   text-transform: uppercase;
 }
 .nfc-tagline { margin-top: 14px; text-align: left; }
+.nfc-points { display: grid; gap: 10px; margin-top: 22px; }
+.nfc-points span { position: relative; border: 1px solid #FFE0D3; border-radius: 14px; background: #FFF7F2; padding: 11px 12px 11px 34px; color: var(--blue); font-size: .84rem; font-weight: 800; }
+.nfc-points span::before { content: "✓"; position: absolute; left: 13px; color: var(--orange); font-weight: 900; }
 .nfc-visual { max-width: 320px; justify-self: center; }
 .nfc-visual img { transform: none; }
 
@@ -264,7 +268,7 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   letter-spacing: -.025em;
 }
 .action-card p {
-  max-width: 18ch;
+  max-width: 24ch;
   color: var(--muted);
   font-size: .84rem;
   font-weight: 700;
@@ -332,6 +336,7 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
 .faq,
 .showcase,
 .final-cta { background: rgba(248, 250, 252, .82); }
+.dashboard-card,
 .showcase-grid {
   display: grid;
   gap: 30px;
@@ -343,11 +348,15 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   box-shadow: var(--shadow);
 }
 .showcase-grid p:not(.eyebrow) { margin-top: 16px; color: var(--muted); }
+.dashboard-card { gap: 8px; }
+.dashboard-card .section-heading { margin-bottom: 20px; }
+.dashboard-card .section-heading p { max-width: 620px; }
 .showcase-visual { width: 100%; max-width: 430px; justify-self: center; }
 .pill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pill-grid article { min-height: 86px; display: flex; align-items: center; justify-content: center; text-align: center; }
 .business { background: rgba(234, 244, 255, .42); }
 
-.pricing-cards { display: grid; gap: 20px; max-width: 820px; margin-inline: auto; }
+.pricing-cards { display: grid; gap: 20px; max-width: 980px; margin-inline: auto; }
 .price-card {
   display: flex;
   flex-direction: column;
@@ -421,7 +430,7 @@ details p { margin-top: 12px; color: var(--muted); font-size: .85rem; }
   .hero-text { font-size: 1.08rem; }
   .three-grid,
   .step-grid { grid-template-columns: repeat(3, 1fr); }
-  .action-grid,
+  .action-grid { grid-template-columns: repeat(4, 1fr); }
   .benefit-grid { grid-template-columns: repeat(3, 1fr); }
   .access-grid { grid-template-columns: repeat(3, 1fr); }
   .mobile-carousel {
@@ -454,12 +463,16 @@ details p { margin-top: 12px; color: var(--muted); font-size: .85rem; }
     min-height: 172px;
   }
   .benefit-grid article { min-height: 210px; }
+  .dashboard-card,
   .showcase-grid { grid-template-columns: 1fr .82fr; padding: 34px; }
+  .dashboard-card { align-items: center; }
   .showcase-visual { max-width: 480px; }
   .nfc-card { grid-template-columns: 1fr 340px; padding: 34px; }
-  .pill-grid { grid-template-columns: repeat(5, 1fr); }
+  .pill-grid { grid-template-columns: repeat(4, 1fr); }
   .pricing-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
+  .pricing-cards-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .featured-price { transform: translateY(-8px); }
+  .pricing-cards-three .featured-price { transform: translateY(-10px); }
   .faq-grid { grid-template-columns: .8fr 1.2fr; gap: 64px; }
   .footer-grid { grid-template-columns: 1.4fr .8fr; }
   .hero-visual { width: min(100%, 380px); }
