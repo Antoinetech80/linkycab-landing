@@ -97,6 +97,12 @@
         </div>
       </section>
 
+      <section class="hero-followup section" aria-label="Message LinkyCab">
+        <div class="container">
+          <p>Vous faites déjà le plus dur : transporter des clients satisfaits. LinkyCab vous aide simplement à ne pas les perdre après la course.</p>
+        </div>
+      </section>
+
       <section class="problem-section section" aria-labelledby="problem-title">
         <div class="container">
           <div class="problem-card">
@@ -110,8 +116,9 @@
       <section class="actions section" id="actions">
         <div class="container">
           <div class="section-heading section-heading-centered">
+            <p class="eyebrow">Chaque course peut devenir une opportunité.</p>
             <h2>Tout ce qu’il faut pour vous recontacter</h2>
-            <p>Appel, WhatsApp, SMS, réservation, avis Google, contact : tout est accessible depuis votre carte.</p>
+            <p>Un client satisfait peut vous rappeler demain, dans une semaine ou dans trois mois. Encore faut-il qu’il puisse vous retrouver facilement.</p>
           </div>
           <div class="action-grid mobile-carousel" aria-label="Actions disponibles depuis la carte LinkyCab">
             <article class="action-card mobile-carousel-card"><span class="action-icon" aria-hidden="true"></span><h3>Appeler</h3><p>Un appel direct vers vous.</p></article>
@@ -197,6 +204,17 @@
         </div>
       </section>
 
+      <section class="launch-offer section" aria-labelledby="launch-offer-title">
+        <div class="container">
+          <div class="launch-offer-card">
+            <p class="eyebrow">Offre de lancement</p>
+            <h2 id="launch-offer-title">1 mois offert sur l’abonnement mensuel.</h2>
+            <p>Testez LinkyCab sur le terrain avec vos passagers.</p>
+            <p class="launch-offer-note">Puis 3,90 € / mois. Annulable à tout moment.</p>
+          </div>
+        </div>
+      </section>
+
       <section class="pricing section" id="prix">
         <div class="container">
           <div class="section-heading section-heading-centered">
@@ -205,8 +223,10 @@
           </div>
           <div class="pricing-cards pricing-cards-three">
             <article class="price-card">
+              <div class="badges"><span>1 mois offert</span></div>
               <h3>Mensuel</h3>
               <p class="price">3,90 € <small>/ mois</small></p>
+              <p class="price-microcopy">Puis 3,90 € / mois. Annulable à tout moment.</p>
               <p>Pour démarrer avec votre carte digitale chauffeur.</p>
               <ul>
                 <li>Carte digitale LinkyCab</li>
@@ -214,16 +234,15 @@
                 <li>Lien partageable</li>
                 <li>Ajout contact</li>
                 <li>Espace chauffeur</li>
+                <li>Carte NFC en option : 14,90 €</li>
               </ul>
-              <p class="option">Carte NFC disponible en option</p>
-              <a class="button" href="https://linkycab.com" id="monthly_subscription">Commencer au mois</a>
+              <a class="button" href="https://buy.stripe.com/STRIPE_MONTHLY_CHECKOUT_URL" id="monthly_subscription">Créer ma carte</a>
             </article>
             <article class="price-card featured-price">
-              <div class="badges"><span>Meilleure offre</span></div>
+              <div class="badges"><span>Meilleure offre</span><span>Carte NFC offerte</span></div>
               <h3>Annuel</h3>
               <p class="price">29 € <small>/ an</small></p>
               <p>Le meilleur choix pour utiliser LinkyCab toute l’année.</p>
-              <p class="annual-nfc-highlight">Carte NFC offerte</p>
               <ul>
                 <li>Carte digitale LinkyCab</li>
                 <li>QR Code personnel</li>
@@ -232,7 +251,8 @@
                 <li>Espace chauffeur</li>
                 <li>Carte NFC offerte</li>
               </ul>
-              <a class="button" href="https://linkycab.com" id="annual_subscription">Choisir l’annuel</a>
+              <p class="option">Carte NFC expédiée après validation du premier paiement annuel.</p>
+              <a class="button" href="https://buy.stripe.com/STRIPE_ANNUAL_CHECKOUT_URL" id="annual_subscription">Choisir l’annuel</a>
             </article>
             <article class="price-card nfc-price">
               <h3>Carte NFC</h3>
@@ -244,6 +264,7 @@
                 <li>Reliée à votre profil LinkyCab</li>
                 <li>Numéro de carte unique</li>
               </ul>
+              <a class="button" href="https://buy.stripe.com/STRIPE_NFC_CARD_CHECKOUT_URL" id="nfc_card_checkout">Acheter la carte NFC</a>
               <p class="option">Réservé aux utilisateurs LinkyCab actifs</p>
             </article>
           </div>
@@ -278,5 +299,14 @@
     </main>
 
     <footer class="site-footer"><div class="container footer-grid"><div><div class="footer-brand-heading"><img class="footer-logo" src="assets/img/logo-linkycab-icon.png" alt="Icône Linkycab"><p class="footer-brand-name">Linkycab</p></div><p class="footer-baseline">LinkyCab — La carte chauffeur pensée pour récupérer des clients directs.</p></div><nav aria-label="Informations légales"><a href="/mentions-legales/">Mentions légales</a><a href="/politique-confidentialite/">Confidentialité</a><a href="/conditions-utilisation/">CGU</a><a href="/conditions-generales-vente/">CGV</a><a href="/politique-cookies/">Cookies</a><a href="/contact/">Contact</a></nav></div></footer>
+    <script>
+      const STRIPE_MONTHLY_CHECKOUT_URL = "https://buy.stripe.com/STRIPE_MONTHLY_CHECKOUT_URL";
+      const STRIPE_ANNUAL_CHECKOUT_URL = "https://buy.stripe.com/STRIPE_ANNUAL_CHECKOUT_URL";
+      const STRIPE_NFC_CARD_CHECKOUT_URL = "https://buy.stripe.com/STRIPE_NFC_CARD_CHECKOUT_URL";
+
+      document.getElementById("monthly_subscription")?.setAttribute("href", STRIPE_MONTHLY_CHECKOUT_URL);
+      document.getElementById("annual_subscription")?.setAttribute("href", STRIPE_ANNUAL_CHECKOUT_URL);
+      document.getElementById("nfc_card_checkout")?.setAttribute("href", STRIPE_NFC_CARD_CHECKOUT_URL);
+    </script>
   </body>
 </html>
