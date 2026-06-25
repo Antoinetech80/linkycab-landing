@@ -67,6 +67,7 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   font-size: .84rem;
   font-weight: 800;
   box-shadow: 0 14px 30px rgba(252, 81, 35, .22);
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease, background-color 240ms ease;
 }
 .button-secondary { border-color: #CFE6FF; background: #fff; color: var(--blue); box-shadow: 0 12px 24px rgba(18, 58, 90, .07); }
 .button-small { min-height: 40px; padding: 9px 13px; font-size: .72rem; }
@@ -490,6 +491,46 @@ details p { margin-top: 12px; color: var(--muted); font-size: .85rem; }
 .site-footer a { color: #DCEBFA; font-size: .8rem; }
 .site-footer nav { display: grid; gap: 7px; }
 
+.animations-ready .reveal-on-scroll,
+.animations-ready .reveal-stagger-item {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.animations-ready .reveal-on-scroll.is-visible,
+.animations-ready .reveal-stagger-item.is-visible {
+  opacity: 1;
+  transform: translateY(var(--card-translate-y, 0));
+}
+
+.reveal-on-scroll,
+.reveal-stagger-item {
+  transition: opacity 640ms cubic-bezier(.22, 1, .36, 1), transform 640ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.reveal-stagger-item {
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.three-grid article,
+.step-grid article,
+.action-grid article,
+.pill-grid article,
+.benefit-grid article,
+.access-grid article,
+.price-card,
+.example-cta-card,
+.nfc-card,
+.dashboard-card,
+.final-cta-card {
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
+.featured-price,
+.pricing-cards-three .featured-price {
+  --card-translate-y: -2px;
+}
+
 @media (min-width: 720px) {
   .container { width: min(1140px, calc(100% - 64px)); }
   .section { padding: 96px 0; }
@@ -548,8 +589,8 @@ details p { margin-top: 12px; color: var(--muted); font-size: .85rem; }
   .pricing { padding-top: 48px; }
   .pricing-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
   .pricing-cards-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .featured-price { transform: translateY(-8px); }
-  .pricing-cards-three .featured-price { transform: translateY(-10px); }
+  .featured-price { --card-translate-y: -8px; transform: translateY(var(--card-translate-y)); }
+  .pricing-cards-three .featured-price { --card-translate-y: -10px; transform: translateY(var(--card-translate-y)); }
   .faq-grid { grid-template-columns: .8fr 1.2fr; gap: 64px; }
   .footer-grid { grid-template-columns: 1.4fr .8fr; }
   .hero-visual { width: min(100%, 380px); }
@@ -574,4 +615,58 @@ details p { margin-top: 12px; color: var(--muted); font-size: .85rem; }
   .legal-main { width: min(860px, calc(100% - 64px)); padding: 64px 0 82px; }
   .legal-card { padding: 28px; }
   .site-footer nav { grid-template-columns: repeat(3, max-content); justify-content: end; column-gap: 18px; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 38px rgba(252, 81, 35, .28);
+  }
+
+  .button-secondary:hover {
+    box-shadow: 0 16px 32px rgba(18, 58, 90, .11);
+  }
+
+  .three-grid article:hover,
+  .step-grid article:hover,
+  .action-grid article:hover,
+  .pill-grid article:hover,
+  .benefit-grid article:hover,
+  .access-grid article:hover,
+  .price-card:hover,
+  .example-cta-card:hover,
+  .nfc-card:hover,
+  .dashboard-card:hover,
+  .final-cta-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 46px rgba(18, 58, 90, .12);
+  }
+
+  .featured-price:hover,
+  .pricing-cards-three .featured-price:hover {
+    transform: translateY(-12px);
+  }
+}
+
+.button:active {
+  transform: scale(.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .animations-ready .reveal-on-scroll,
+  .animations-ready .reveal-stagger-item,
+  .animations-ready .reveal-on-scroll.is-visible,
+  .animations-ready .reveal-stagger-item.is-visible {
+    opacity: 1;
+    transform: translateY(var(--card-translate-y, 0));
+  }
 }
