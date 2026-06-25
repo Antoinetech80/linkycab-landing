@@ -79,7 +79,7 @@
     </header>
 
     <main id="top">
-      <section class="hero section">
+      <section class="hero section" data-reveal>
         <div class="container hero-grid">
           <div class="hero-copy">
             <h1>Gardez vos clients après chaque course</h1>
@@ -103,7 +103,7 @@
         </div>
       </section>
 
-      <section class="problem-section section" aria-labelledby="problem-title">
+      <section class="problem-section section" aria-labelledby="problem-title" data-reveal>
         <div class="container">
           <div class="problem-card">
             <h2 id="problem-title">Après la course, vos clients vous oublient vite.</h2>
@@ -113,7 +113,7 @@
         </div>
       </section>
 
-      <section class="actions section" id="actions">
+      <section class="actions section" id="actions" data-reveal>
         <div class="container">
           <div class="section-heading section-heading-centered">
             <p class="eyebrow">Chaque course peut devenir une opportunité.</p>
@@ -133,7 +133,7 @@
         </div>
       </section>
 
-      <section class="example-cta section" aria-labelledby="example-cta-title">
+      <section class="example-cta section" aria-labelledby="example-cta-title" data-reveal>
         <div class="container">
           <div class="example-cta-card">
             <h2 id="example-cta-title">Voyez ce que découvre votre client</h2>
@@ -146,7 +146,7 @@
         </div>
       </section>
 
-      <section class="nfc-option section" id="carte-nfc">
+      <section class="nfc-option section" id="carte-nfc" data-reveal>
         <div class="container nfc-card">
           <div class="nfc-copy">
             <p class="nfc-offer">Offerte avec l’abonnement annuel</p>
@@ -162,7 +162,7 @@
         </div>
       </section>
 
-      <section class="solution section">
+      <section class="solution section" data-reveal>
         <div class="container">
           <div class="section-heading section-heading-centered">
             <h2>Comment fonctionne LinkyCab</h2>
@@ -176,7 +176,7 @@
         </div>
       </section>
 
-      <section class="dashboard section" id="espace-chauffeur">
+      <section class="dashboard section" id="espace-chauffeur" data-reveal>
         <div class="container dashboard-card">
           <div class="section-heading">
             <h2>Votre espace chauffeur</h2>
@@ -191,7 +191,7 @@
         </div>
       </section>
 
-      <section class="business section" id="benefices">
+      <section class="business section" id="benefices" data-reveal>
         <div class="container">
           <div class="section-heading section-heading-centered">
             <h2>Pourquoi utiliser LinkyCab ?</h2>
@@ -215,7 +215,7 @@
         </div>
       </section>
 
-      <section class="pricing section" id="prix">
+      <section class="pricing section" id="prix" data-reveal>
         <div class="container">
           <div class="section-heading section-heading-centered">
             <h2>Tarifs simples</h2>
@@ -272,7 +272,7 @@
         </div>
       </section>
 
-      <section class="faq section" id="faq">
+      <section class="faq section" id="faq" data-reveal>
         <div class="container faq-grid">
           <div class="section-heading">
             <h2>Questions fréquentes</h2>
@@ -289,7 +289,7 @@
         </div>
       </section>
 
-      <section class="final-cta section">
+      <section class="final-cta section" data-reveal>
         <div class="container final-cta-card">
           <h2>Prêt à créer votre carte chauffeur ?</h2>
           <p>Lancez votre carte digitale LinkyCab et commencez à partager votre lien dès aujourd’hui.</p>
@@ -307,6 +307,36 @@
       document.getElementById("monthly_subscription")?.setAttribute("href", STRIPE_MONTHLY_CHECKOUT_URL);
       document.getElementById("annual_subscription")?.setAttribute("href", STRIPE_ANNUAL_CHECKOUT_URL);
       document.getElementById("nfc_card_checkout")?.setAttribute("href", STRIPE_NFC_CARD_CHECKOUT_URL);
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!reduceMotion) {
+        document.body.classList.add("animations-ready");
+
+        document.querySelectorAll("[data-reveal]").forEach((element) => {
+          element.classList.add("reveal-on-scroll");
+        });
+
+        document.querySelectorAll(".action-grid, .step-grid, .benefit-grid, .pricing-cards, .pill-grid, .nfc-points").forEach((group) => {
+          Array.from(group.children).forEach((item, index) => {
+            item.classList.add("reveal-stagger-item");
+            item.style.setProperty("--reveal-delay", `${Math.min(index, 3) * 80}ms`);
+          });
+        });
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.14, rootMargin: "0px 0px -8% 0px" });
+
+        document.querySelectorAll(".reveal-on-scroll, .reveal-stagger-item").forEach((element) => {
+          revealObserver.observe(element);
+        });
+      }
     </script>
   </body>
 </html>
