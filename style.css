@@ -229,6 +229,24 @@ h3 { font-size: clamp(1.25rem, 5.4vw, 1.38rem); line-height: 1.15; font-weight: 
   scroll-snap-stop: always;
 }
 
+.example-cta { padding-top: 18px; padding-bottom: 34px; }
+.example-cta-card {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  max-width: 760px;
+  margin-inline: auto;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .82);
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 14px 34px rgba(18, 58, 90, .07);
+}
+.example-cta-card h2 { font-size: clamp(1.55rem, 6vw, 2.2rem); }
+.example-cta-card p { max-width: 500px; color: var(--muted); font-size: .94rem; }
+.example-cta-actions { justify-content: center; margin-top: 4px; }
+
 .nfc-option { background: rgba(248, 250, 252, .82); padding-top: 34px; }
 .nfc-card {
   display: grid;
